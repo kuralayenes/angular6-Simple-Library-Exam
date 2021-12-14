@@ -1,3 +1,3 @@
-# Angular Firebase Login
+# Angular Firebase Login and CRUD
 
-simple code to add Firebase authentication to an Angular 11 app
+simple code to add Firebase authentication to an Angular 
