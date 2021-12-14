@@ -1,0 +1,15 @@
+h1{
+    background-color: antiquewhite;
+    padding: 1vw;
+}
+th{
+    padding: 1vw;
+}
+
+td{
+    padding: 1vw;
+}
+table{
+    background-color: antiquewhite;
+    border-radius: 2%;
+}

@@ -1,0 +1,30 @@
+<!-- <form class="form-inline">
+    <input class="form-control"  placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 40%;">
+     <button class="btn btn-outline-primary" (click)="searchText='' ">X</button> 
+</form> -->
+<h1>Book List</h1>
+<table class="table table-sm">
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Page</th>
+        <th>Available</th>
+    </thead>
+    <ng-container *ngFor="let book of booksArray">
+        <tr class="table-dark"  >
+            <td> {{book.id}} </td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.page}}</td>
+            <td>{{book.available}}</td>
+            <td>
+                <button class="btn btn-warning" (click)="bookService.populateForm(book)">Edit</button>
+                <button class="btn btn-danger" (click)="onDelete(book.$key)" style="margin-left: 0.5vw;">Delete</button>
+            </td>
+        </tr>
+    </ng-container>
+</table>
+<div class="alert alert-danger" *ngIf="showDelMessage">
+    Deleted Successfully.
+</div>
